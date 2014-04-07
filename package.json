@@ -1,0 +1,33 @@
+{
+  "name": "node-boil",
+  "version": "0.0.1",
+  "description": "My node module generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcooliveira/node-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "boil",
+    "generate",
+    "generator",
+    "scaffold"
+  ],
+  "author": "Marco Oliveira <me@marcooliveira.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcooliveira/node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/marcooliveira/node-boilerplate",
+  "bin": {
+    "boil": "index.js"
+  },
+  "dependencies": {
+    "decompress-zip": "0.0.6",
+    "shelljs": "^0.2.6"
+  }
+}
