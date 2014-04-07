@@ -1,6 +1,6 @@
 {
   "name": "node-boil",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My node module generator",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "decompress-zip": "0.0.6",
+    "request": "^2.34.0",
     "shelljs": "^0.2.6"
   }
 }
