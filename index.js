@@ -7,13 +7,17 @@ var request       = require('request'),
     fs            = require('fs'),
     path          = require('path'),
     shelljs       = require('shelljs'),
+    conf          = require('rc')('boil', {
+        repository: 'https://github.com/marcooliveira/node-boilerplate-files/archive/master.zip',
+        success: 'Boiled!'
+    }),
     unzipper
 
 ;
 
 var tmpFile = path.join(os.tmpdir(), 'boilerplate-files.zip');
 
-var req = request('https://github.com/marcooliveira/node-boilerplate-files/archive/master.zip');
+var req = request(conf.repository);
 
 req.on('end', function () {
     unzipper = new DecompressZip(tmpFile);
@@ -32,7 +36,7 @@ req.on('end', function () {
         shelljs.mv('./node-boilerplate-files-master/*', './');
         shelljs.rm('-fr', './node-boilerplate-files-master');
 
-        console.log('Boiled');
+        console.log(conf.success);
     });
 
 });
